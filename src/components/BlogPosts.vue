@@ -49,6 +49,10 @@ export default {
     padding: 15px;
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
     border-radius: 20px;
+    transition: all 100ms ease-in-out;
+    &:hover{
+      transform: scale(1.05);
+    }
   }
 
   img {

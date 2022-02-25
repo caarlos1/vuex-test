@@ -1,7 +1,10 @@
+import dayjs from "dayjs";
+
 export const blog = {
   state: () => ({
     posts: [],
     page: 1,
+    lastUpdate: 0,
   }),
   getters: {
     allPosts: (state) => {
@@ -13,6 +16,7 @@ export const blog = {
   },
   mutations: {
     updatePosts(state, payload) {
+      state.lastUpdate = dayjs().minute();
       state.posts = [...payload];
     },
     updatePage(state, payload) {
@@ -23,9 +27,9 @@ export const blog = {
     storePosts(context, p) {
       context.commit("updatePosts", p);
     },
-    changePage(context, p){
+    changePage(context, p) {
       context.commit("updatePage", p);
-    }
+    },
   },
 };
 

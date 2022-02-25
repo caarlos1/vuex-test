@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Sobre esse site...</h1>
-    <p>Nada a declarar. Volte para testar o store!</p>
+    <h1>About this site...</h1>
+    <p>Go back to your house!</p>
   </div>
 </template>
